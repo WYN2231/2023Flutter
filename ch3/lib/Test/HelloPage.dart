@@ -10,23 +10,24 @@ class HelloPage extends StatefulWidget {
 }
 
 class _HelloPageState extends State<HelloPage> {
-  String message = 'Hello World';
+  String message = 'Hello';
 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hello World'),
+        title: Text('Hello'),
       ),
       body: Text(
         message,
-        style: TextStyle(fontSize: 30),
+        style: TextStyle(fontSize: 50),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
           setState(() {
             message = "헬로 월드";
-            });
+          });
+        },
       ),
     );
   }
