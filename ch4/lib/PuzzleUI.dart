@@ -13,7 +13,7 @@ class _PuzzleUIState extends State<PuzzleUI> {
 
 
   String GetButtonText(int index) {
-    int value = pg.GetValue(index);
+    int value = pg.GetValue(index);  // 퍼즐게임 리스트에 있는 데이터를 불러옴
     if (value == 0)
       return '';
     else
@@ -25,7 +25,7 @@ class _PuzzleUIState extends State<PuzzleUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Listview / ListTile'),
+        title: Text('Number Sorting Puzzle'),
         backgroundColor: Colors.blue,
       ),
       body: GridView.count(
@@ -35,87 +35,94 @@ class _PuzzleUIState extends State<PuzzleUI> {
         crossAxisCount: 4,
         children: [
           ElevatedButton(
-            onPressed: (){},
-            child: Text(GetButtonText(0)),
+            onPressed: (){MoveButton(0);},
+            child: Text(GetButtonText(0)), // '${pg.GetValue(0)}'
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(1);},
             child: Text(GetButtonText(1)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(2);},
+            child: Text(GetButtonText(2)),
+          ),
+          ElevatedButton(
+            onPressed: (){MoveButton(3);},
             child: Text(GetButtonText(3)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(4);},
             child: Text(GetButtonText(4)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(5);},
             child: Text(GetButtonText(5)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(6);},
             child: Text(GetButtonText(6)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(7);},
             child: Text(GetButtonText(7)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(8);},
             child: Text(GetButtonText(8)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(9);},
             child: Text(GetButtonText(9)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(10);},
             child: Text(GetButtonText(10)),
           ),
           ElevatedButton(
-            onPressed: (){},
-            child: Text(GetButtonText(10)),
-          ),
-          ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(11);},
             child: Text(GetButtonText(11)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(12);},
             child: Text(GetButtonText(12)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(13);},
             child: Text(GetButtonText(13)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(14);},
             child: Text(GetButtonText(14)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(15);},
             child: Text(GetButtonText(15)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(16);},
             child: Text(GetButtonText(16)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(17);},
             child: Text(GetButtonText(17)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(18);},
             child: Text(GetButtonText(18)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){MoveButton(19);},
             child: Text(GetButtonText(19)),
           ),
           ElevatedButton(
-            onPressed: (){},
+            onPressed: (){
+              setState(() {
+                pg.Shuffle();
+              });
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.cyan,
+            ),
             child: Text(
               'Start',
               style: TextStyle(fontSize: 16),
@@ -124,5 +131,11 @@ class _PuzzleUIState extends State<PuzzleUI> {
         ],
       ),
     );
+  }
+
+  void MoveButton(int index) {
+    setState(() {
+      pg.SwapPosition(index);
+    });
   }
 }
