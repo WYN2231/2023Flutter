@@ -3,6 +3,10 @@ import 'TextFieldTest.dart';
 import 'CheckboxTest.dart';
 import 'RadioListTest.dart';
 import 'DropDown.dart';
+import 'AlertDig.dart';
+import 'DatePicker.dart';
+import 'EventTest.dart';
+import 'HeroTest.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +28,11 @@ class MyApp extends StatelessWidget {
       //home: TextFieldTest(),
       //home: CheckboxTest(),
       //home: RadioListTest(),
-      home: DropDown(),
+      // home: DropDown(),
+      // home: AlertDig(),
+      //home: DatePickerTest(),
+      // home: EventTest(),
+      home: HeroTest(),
     );
   }
 }
