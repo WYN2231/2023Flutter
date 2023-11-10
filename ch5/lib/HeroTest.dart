@@ -30,8 +30,8 @@ class _HeroTestState extends State<HeroTest> {
           tag: 'Image',
           child: Image.asset(
             'assets/flutter.png',
-            width: 100,
-            height: 100,
+            width: 200,
+            height: 200,
           ),
         ),
       ),
@@ -46,9 +46,47 @@ class HeroDetailPage extends StatelessWidget {
         title: Text('Hero Detail'),
         backgroundColor: Colors.blueGrey,
       ),
-      body: Hero(
-        tag: 'image',
-        child: Image.asset('assets/flutter.png'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Center(
+            child: Hero(
+              tag: 'image',
+              child: Image.asset(
+                'assets/flutter.png',
+              ),
+            ),
+          ),
+          Text(
+              'TEST',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(40.0),
+            child: Center(
+              child: Hero(
+                tag: 'image',
+                child: Image.asset(
+                    'assets/google.png',
+                  width: 100,
+                  height: 100,
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Hero(
+              tag: 'image',
+              child: Image.asset(
+                  'assets/git.png',
+                width: 110,
+                height: 110,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
