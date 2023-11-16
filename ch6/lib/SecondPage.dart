@@ -31,7 +31,8 @@ class _SecondPageState extends State<SecondPage> {
               ElevatedButton(
                 child: const Text("이전 페이지로 이동"),
                 onPressed: (){
-                  Navigator.pop(context, 'ok');
+                  final person = Person('김길동', 40);
+                  Navigator.pop(context, person);
                 },
               ),
               ElevatedButton(
