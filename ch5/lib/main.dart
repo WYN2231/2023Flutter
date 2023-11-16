@@ -7,6 +7,9 @@ import 'AlertDig.dart';
 import 'DatePicker.dart';
 import 'EventTest.dart';
 import 'HeroTest.dart';
+import 'AnimatedContainer.dart';
+import 'SliverTest.dart';
+import 'SliverList.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +35,10 @@ class MyApp extends StatelessWidget {
       // home: AlertDig(),
       //home: DatePickerTest(),
       // home: EventTest(),
-      home: HeroTest(),
+      // home: HeroTest(),
+      // home: const AnimatedTest(),
+      // home: const SliverTest(),
+      home: SliverListTest(),
     );
   }
 }
