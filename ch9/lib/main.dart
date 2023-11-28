@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const MyCustomForm(),
-      // home: const BmiMain(),
-      home: const BmiResult(height: 1.0, weight: 2.0,),
+      home: const BmiMain(),
+      // home: const BmiResult(height: 1.0, weight: 2.0,),
       // home: Scaffold(
       //   appBar: AppBar(
       //     title: const Text("폼 검증 데모"),
