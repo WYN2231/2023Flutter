@@ -7,7 +7,7 @@ class BmiResult extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bmi = weight / ((height/100 * height/100));
+    final bmi = weight / ((height/100) * (height/100));
     return Scaffold(
       appBar: AppBar(
         title: const Text("비만도 계산기"),
